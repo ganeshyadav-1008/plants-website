@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GreenWorld - Plant Care</title>
+
+<style>
+
+/* Reset */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* Background */
+body{
+font-family: Arial, sans-serif;
+background: linear-gradient(120deg,#e8f5e9,#c8e6c9,#b2dfdb,#dcedc8,#e0f7fa);
+background-size:400% 400%;
+animation:plantBG 12s ease infinite;
+color:#2e2e2e;
+min-height:100vh;
+}
+
+@keyframes plantBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Header */
+header{
+background:linear-gradient(to right,#2e7d32,#43a047);
+color:white;
+padding:20px;
+text-align:center;
+}
+
+/* Navigation */
+nav a{
+color:white;
+text-decoration:none;
+margin:0 12px;
+padding:8px 14px;
+border-radius:6px;
+}
+
+nav a:hover{
+background:white;
+color:#2e7d32;
+}
+
+/* Form Section */
+section{
+padding:50px;
+text-align:center;
+}
+
+/* Form Card */
+form{
+background:white;
+width:360px;
+margin:auto;
+padding:30px;
+border-radius:16px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+text-align:left;
+}
+
+/* Heading */
+h2{
+color:#2e7d32;
+margin-bottom:20px;
+text-align:center;
+}
+
+/* Inputs */
+input,select{
+width:100%;
+padding:9px;
+margin:8px 0 18px;
+border-radius:8px;
+border:1px solid #a5d6a7;
+}
+
+/* Buttons */
+button{
+width:100%;
+padding:10px;
+background:#43a047;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+margin-bottom:10px;
+}
+
+button:hover{
+background:#2e7d32;
+}
+
+input[type="submit"]{
+background:#43a047;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+input[type="submit"]:hover{
+background:#2e7d32;
+}
+
+/* Bill text */
+#total{
+font-size:18px;
+font-weight:bold;
+color:#2e7d32;
+text-align:center;
+}
+
+/* Footer */
+footer{
+background:linear-gradient(to right,#2e7d32,#43a047);
+color:white;
+text-align:center;
+padding:15px;
+margin-top:50px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>GreenWorld</h1>
+
+<nav>
+<a href="indexp.html">Home</a>
+<a href="plants.html">Plants</a>
+<a href="care.html">Plant Care</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<section>
+
+<h2>Plant Care Form</h2>
+
+<form action="ordersuccessful.html">
+
+Name:<br>
+<input type="text" required>
+
+Select Plant:<br>
+<select id="plant">
+<option value="100">Rose - ₹100</option>
+<option value="150">Aloe Vera - ₹150</option>
+<option value="200">Money Plant - ₹200</option>
+</select>
+
+Quantity:<br>
+<input type="number" id="qty" value="1">
+
+<button type="button" onclick="calculateBill()">Calculate Bill</button>
+
+<p id="total">Total Bill: ₹0</p>
+
+<input type="submit" value="Submit Order">
+
+</form>
+
+</section>
+
+<footer>
+<p>© 2026 GreenWorld</p>
+</footer>
+
+<script>
+
+function calculateBill(){
+
+var price=document.getElementById("plant").value;
+
+var quantity=document.getElementById("qty").value;
+
+var total=price*quantity;
+
+document.getElementById("total").innerHTML="Total Bill: ₹"+total;
+
+}
+
+</script>
+
+</body>
+</html>

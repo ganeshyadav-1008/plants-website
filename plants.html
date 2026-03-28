@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GreenWorld - Plants</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<style>
+    /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Clean Plant Theme Background */
+/* Colorful Plant Theme Background */
+body{
+font-family: Arial, sans-serif;
+background: linear-gradient(120deg,
+#e8f5e9,
+#c8e6c9,
+#b2dfdb,
+#dcedc8,
+#e0f7fa);
+background-size: 400% 400%;
+animation: plantBG 12s ease infinite;
+color:#2e2e2e;
+min-height:100vh;
+position:relative;
+}
+
+/* Animated Gradient Movement */
+@keyframes plantBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+/* Soft Leaf Pattern Overlay */
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:
+radial-gradient(#66bb6a 1px, transparent 1px),
+radial-gradient(#81c784 1px, transparent 1px);
+background-size:40px 40px;
+opacity:0.2;
+z-index:-1;
+}
+section{
+width:85%;
+margin:30px auto;
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+}
+/* Paragraph Text */
+p{
+font-size:17px;
+line-height:1.6;
+margin-top:15px;
+text-align:center;
+color:#444;
+}
+
+/* Plant List */
+ul{
+list-style:none;
+margin-top:15px;
+text-align:center;
+}
+
+ul li{
+font-size:18px;
+padding:8px;
+font-weight:bold;
+color:#2e7d32;
+transition:0.3s;
+}
+
+ul li:hover{
+color:#1b5e20;
+transform:scale(1.05);
+}
+
+/* Links */
+a{
+color:#43a047;
+font-weight:bold;
+text-decoration:none;
+transition:0.3s;
+}
+
+a:hover{
+color:#1b5e20;
+text-decoration:underline;
+}
+
+/* Table Text */
+table{
+font-size:17px;
+}
+
+th{
+font-size:18px;
+letter-spacing:1px;
+}
+
+td{
+font-weight:500;
+}
+/* Subtle Leaf Pattern Effect */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#c8e6c9 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.3;
+    z-index: -1;
+}
+/* Image Row */
+.image-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+/* Image Row */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* Image Styling */
+.image-row img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+
+    /* Colorful Gradient Border */
+    border: 5px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(45deg,#43a047,#66bb6a,#81c784,#a5d6a7) border-box;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.image-row img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #2e7d32, #43a047);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+.plantDetails{
+    margin-top:20px;
+    padding:20px;
+    border-radius:15px;
+
+    /* colorful gradient background */
+    background: linear-gradient(135deg,#e8f5e9,#c8e6c9,#b2dfdb,#e0f7fa);
+
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+    animation: fadeIn 0.6s ease;
+}
+
+/* heading */
+.plantDetails h3{
+    color:#1b5e20;
+    text-align:center;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+/* text styling */
+.plantDetails p{
+    font-size:17px;
+    background:white;
+    padding:8px;
+    margin:6px 0;
+    border-radius:8px;
+}
+
+/* animation */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/* Plant detail card */
+.plantDetails{
+    margin-top:20px;
+    padding:25px;
+    border-radius:15px;
+    background: linear-gradient(135deg,#e8f5e9,#c8e6c9,#b2dfdb,#e0f7fa);
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+    animation: fadeIn 0.6s ease;
+}
+
+/* Plant name heading */
+.plantDetails h3{
+    text-align:center;
+    color:#1b5e20;
+    font-size:26px;
+    margin-bottom:15px;
+    letter-spacing:1px;
+}
+
+/* Detail text */
+.plantDetails p{
+    font-size:18px;
+    margin:8px 0;
+    padding:10px;
+    border-radius:10px;
+    background:linear-gradient(45deg,#ffffff,#f1f8f4);
+    box-shadow:0 3px 6px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+/* Highlight the label text */
+.plantDetails p b{
+    color:#2e7d32;
+}
+
+/* Hover effect for each line */
+.plantDetails p:hover{
+    transform:translateX(5px);
+    background:linear-gradient(45deg,#e8f5e9,#ffffff);
+}
+
+/* Animation */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+ul li{
+    background: linear-gradient(45deg,#66bb6a,#81c784);
+    color:white;
+    margin:10px auto;
+    width:220px;
+    padding:10px;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+ul li:hover{
+    background: linear-gradient(45deg,#43a047,#2e7d32);
+    transform:scale(1.08);
+}
+ul li{
+    background: linear-gradient(45deg,#66bb6a,#81c784);
+    color:white;
+    margin:8px auto;
+    width:200px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+ul li:hover{
+    background: linear-gradient(45deg,#43a047,#2e7d32);
+    transform:scale(1.08);
+}
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #2e7d32;
+}
+
+/* Section Box */
+.box {
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 85%;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+/* Headings */
+h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+/* Plant List */
+.plant-list {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.plant-list li {
+    padding: 8px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.plant-list li:hover {
+    color: #2e7d32;
+    transform: translateX(5px);
+}
+
+/* Image */
+img {
+    border-radius: 12px;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Table Styling */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+th {
+    background-color: #43a047;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f8f4;
+}
+
+tr:hover {
+    background-color: #e8f5e9;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #2e7d32, #43a047);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+</style>
+<header>
+    <h1>GreenWorld</h1>
+    <nav>
+        <a href="indexp.html">Home</a>
+        <a href="plants.html">Plants</a>
+        <a href="care.html">Plant Care</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Popular Plants</h2>
+
+    <ul>
+    <li onclick="showPlant('rose')" style="cursor:pointer;">Rose</li>
+    <div id="rose" class="plantDetails" style="display:none;">
+    <h3>Rose Details</h3>
+    <p><b>Type:</b> Flowering Plant</p>
+    <p><b>Colors:</b> Red, Pink, Yellow, White</p>
+    <p><b>Uses:</b> Decoration, Perfume</p>
+    <p><b>Price:</b> ₹100</p>
+</div>
+    <li onclick="showPlant('tulsi')" style="cursor:pointer;">Tulsi (Holy Basil)</li>
+    <div id="tulsi" class="plantDetails" style="display:none;">
+    <h3>Tulsi (Holy Basil) Details</h3>
+    <p><b>Type:</b> Medicinal Plant</p>
+    <p><b>Uses:</b> Ayurvedic Medicine, Immunity Booster</p>
+    <p><b>Sunlight:</b> Full Sun</p>
+    <p><b>Price:</b> ₹120</p>
+</div>
+    <li onclick="showPlant('aloe')" style="cursor:pointer;">Aloe Vera</li>
+    <div id="aloe" class="plantDetails" style="display:none;">
+    <h3>Aloe Vera Details</h3>
+    <p><b>Type:</b> Medicinal Succulent</p>
+    <p><b>Uses:</b> Skin Care, Hair Care, Medicine</p>
+    <p><b>Water:</b> Low</p>
+    <p><b>Price:</b> ₹150</p>
+</div>
+
+    <li onclick="showPlant('money')" style="cursor:pointer;">Money Plant</li>
+    <div id="money" class="plantDetails" style="display:none;">
+    <h3>Money Plant Details</h3>
+    <p><b>Type:</b> Indoor Plant</p>
+    <p><b>Uses:</b> Air Purification, Decoration</p>
+    <p><b>Sunlight:</b> Indirect Light</p>
+    <p><b>Price:</b> ₹200</p>
+</div>
+</ul>
+<div class="image-row">
+    <img src="https://images.unsplash.com/photo-1586082207282-3dcb61d25ebd?auto=format&fit=crop&w=800&q=60"
+         alt="Rose">
+
+    <img src="https://www.idyl.co.in/cdn/shop/files/Aloevera2.webp?v=1756877630&width=1024"
+         alt="Aloe Vera">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbM7yp4u-N8RkGaDDyhrlhoY4x5oBBHfXCGQ&s"
+      ait="Money Plant">
+</div>
+         
+    <p>
+        Learn more at
+        <a href="https://en.wikipedia.org/wiki/Plant" target="_blank">
+        Plant Encyclopedia</a>
+    </p>
+</section>
+
+<section>
+    <h2>Plant Price List</h2>
+
+    <table>
+        <tr>
+            <th>Plant</th>
+            <th>Type</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Rose</td>
+            <td>Flower</td>
+            <td>₹100</td>
+        </tr>
+        <tr>
+            <td>Aloe Vera</td>
+            <td>Medicinal</td>
+            <td>₹150</td>
+        </tr>
+        <tr>
+            <td>Money Plant</td>
+            <td>Indoor</td>
+            <td>₹200</td>
+        </tr>
+    </table>
+</section>
+
+<footer>
+    <p>© 2026 GreenWorld</p>
+</footer>
+<script>
+function showPlant(plantId) {
+
+    var plants = document.getElementsByClassName("plantDetails");
+
+    for (var i = 0; i < plants.length; i++) {
+        plants[i].style.display = "none";
+    }
+
+    document.getElementById(plantId).style.display = "block";
+}
+</script>
+</body>
+</html>

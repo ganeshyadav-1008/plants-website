@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GreenWorld - Home</title>
+
+<style>
+/* Reset */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+/* Colorful Plant Theme Background */
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(120deg,#e8f5e9,#c8e6c9,#b2dfdb,#dcedc8);
+background-size:300% 300%;
+animation:plantBG 12s ease infinite;
+color:#333;
+min-height:100vh;
+}
+
+/* Animated Gradient */
+@keyframes plantBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Light Leaf Pattern */
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:radial-gradient(#a5d6a7 1px,transparent 1px);
+background-size:35px 35px;
+opacity:0.25;
+z-index:-1;
+}
+/* Header */
+header{
+background:#2e7d32;
+color:white;
+padding:20px;
+text-align:center;
+header p{
+font-size:18px;
+letter-spacing:1px;
+opacity:0.9;
+}
+}
+
+header h1{
+margin-bottom:5px;
+}
+/* Banner Section */
+.banner{
+padding:15px;
+text-align:center;
+}
+
+/* Banner Image */
+.banner img{
+width:95%;
+max-height:450px;
+object-fit:contain;
+display:block;
+margin:auto;
+
+/* Gradient Border */
+border:8px solid transparent;
+background:linear-gradient(white,white) padding-box,
+linear-gradient(45deg,#2e7d32,#66bb6a,#a5d6a7) border-box;
+
+border-radius:15px;
+
+/* Shadow */
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
+transition:transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover Effect */
+.banner img:hover{
+transform:scale(1.02);
+box-shadow:0 15px 35px rgba(0,0,0,0.35);
+}
+/* Navigation */
+nav{
+margin-top:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+padding:8px 14px;
+border-radius:5px;
+transition:0.3s;
+}
+
+nav a:hover{
+background:white;
+color:#2e7d32;
+}
+
+/* Sections */
+section{
+padding:25px;
+text-align:center;
+}
+
+/* Box */
+.box{
+background:white;
+width:80%;
+margin:20px auto;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Plant container */
+.plant-container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+/* Plant card */
+.plant{
+text-align:center;
+padding:10px;
+}
+
+/* Image Styling */
+.plant img{
+width:200px;
+height:200px;
+object-fit:cover;
+border-radius:12px;
+border:4px solid #2e7d32;
+box-shadow:0 4px 8px rgba(0,0,0,0.2);
+transition:transform 0.3s, box-shadow 0.3s;
+}
+
+/* Image Hover Effect */
+.plant img:hover{
+transform:scale(1.05);
+box-shadow:0 8px 15px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+footer{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>GreenWorld</h1>
+<p>Explore the beauty of plants</p>
+
+<nav>
+<a href="indexp.html">Home</a>
+<a href="plants.html">Plants</a>
+<a href="care.html">Plant Care</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section class="banner">
+    <img src="https://media.istockphoto.com/id/1181366400/photo/in-the-hands-of-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-on.jpg?s=612x612&w=0&k=20&c=jWUMrHgjMY9zQXsAwZFb1jfM6KxZE16-IXI1bvehjQM="
+         alt="Plants Banner">
+</section>
+
+<section class="box">
+<h2>Popular Plants</h2>
+
+<div class="plant-container">
+
+<div class="plant">
+<img src="https://nurserynisarga.in/wp-content/uploads/2019/10/Untitled-design-2023-08-19T153243.125.webp" alt="Rose">
+<p><b>Rose</b></p>
+</div>
+
+<div class="plant">
+<img src="https://nurserylive.com/cdn/shop/products/nurserylive-plants-aloe-vera-succulent-plant-16968585871500_700x700.jpg?v=1634213151" alt="Aloe Vera">
+<p><b>Aloe Vera</b></p>
+</div>
+
+<div class="plant">
+<img src="https://gachwala.in/wp-content/uploads/2022/06/IMAGE-1-13.webp" alt="Money Plant">
+<p><b>Money Plant</b></p>
+</div>
+
+</div>
+</section>
+
+<section class="box">
+<h2>About GreenWorld</h2>
+<p>GreenWorld helps you learn about different types of plants and their care.</p>
+</section>
+
+<footer>
+<p>© 2026 GreenWorld</p>
+</footer>
+
+</body>
+</html>
